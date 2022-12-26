@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+void findPair(int a[], int n, int sum)
+{
+    sort(a, a+n);
+    int low = 0;
+    int end = n-1;
+    while(low<end){
+    	if(a[low]+a[end] == sum){
+    		cout<<"Pairs found ("<<a[low]<<","<<a[end]<<')'<<endl;
+    		return;
+		}
+		else if(a[low]+a[end]<sum){ 
+		low++;
+		}
+		else if(a[low]+a[end] >sum){
+			end--;
+		}
+	}
+	cout<<"Pair not found"<<endl;
+}
+ 
+int main()
+{
+    int a[] = { 1,2,3 };
+    int sum = 3;
+ 
+    int n = sizeof(a)/sizeof(a[0]);
+ 
+    findPair(a, n, sum);
+ 
+    return 0;
+}
