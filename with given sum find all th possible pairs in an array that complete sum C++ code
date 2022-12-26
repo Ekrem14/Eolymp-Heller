@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;cin>>n;
+    int a[n];
+    int say = 0;
+    for(int i = 0;i<n;i++){
+        cin>>a[i];
+    }
+    int sum;cin>>sum;
+    int j = 0;
+    for(int i = 0;i<n - j;i++){
+        for( j = n-1;j>=0+i;j--){
+            if(a[i]+a[j]==sum){
+                cout<<"Pairs are: "<<endl<<a[i]<<" "<<a[j]<<endl;
+                say++;
+                 continue;
+            }
+            else {
+            	continue;
+			}
+        }
+    }
+    if(say == 0){
+        cout<<"Pair not found"<<endl;
+    }
+}
