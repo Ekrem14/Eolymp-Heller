@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int n;cin>>n;
+   int a[n];
+   for(int i=0;i<n;i++)
+   {
+       cin>>a[i];
+   }
+  int halhazirki_cem  = accumulate(a, a+n,0);
+  int gozlenilen_cem = n*(n-1)/2;
+  cout<<actual_sum - gozlenilen_cem;
+}
+
+
