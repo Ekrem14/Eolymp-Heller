@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;cin>>n;
+    int a[n];
+    int positive = 0, zero = 0, negative = 0;
+    for(int i = 0;i<n;i++){
+        cin>>a[i];
+        if(a[i] == 0)zero++;
+        else if(a[i] > 0)positive++;
+        else if(a[i] < 0)negative++;
+    }
+    cout.precision(6);
+    cout<< fixed << (double)positive/n << endl << fixed << (double)negative/n <<  endl << fixed << (double)zero/n << endl;
+
+}
